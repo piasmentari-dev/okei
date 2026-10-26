@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#ffc8e2" />
+  <title>Moura's Little World ♡</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="sparkle-layer" aria-hidden="true" id="sparkles"></div>
+  <main class="desktop">
+    <header class="browser-bar">
+      <div class="window-dots"><i></i><i></i><i></i></div>
+      <div class="address">♡ my little sewing world ♡</div>
+      <button class="tiny-button" id="themeButton" title="Ganti warna">☼</button>
+    </header>
+
+    <div class="top-note"><span>✿</span> welcome to my tiny universe <span>✿</span></div>
+
+    <section class="hero paper-card">
+      <div class="hero-stickers" aria-hidden="true"><span class="sticker star">✦</span><span class="sticker bow">🎀</span><span class="sticker flower">✿</span></div>
+      <p class="eyebrow">♡ a little website made by ♡</p>
+      <h1>MOURA'S<br><span>LITTLE WORLD</span></h1>
+      <p class="subtitle">tiny joys, silly thoughts & pretty little things ⋆｡°✩</p>
+      <div class="hero-actions">
+        <button class="cute-button pink" data-scroll="rooms">ENTER MY WORLD ↗</button>
+        <button class="cute-button cream" id="surpriseButton">SURPRISE ME ✧</button>
+      </div>
+      <div class="welcome-message" id="surpriseMessage">psst... there are secrets hiding around here ♡</div>
+    </section>
+
+    <div class="ticker" aria-label="Decorative text">
+      <div>♡ BE YOUR OWN LITTLE DAYDREAM ♡ COLLECT CUTE THINGS ♡ STAY A LITTLE WEIRD ♡ BE YOUR OWN LITTLE DAYDREAM ♡</div>
+    </div>
+
+    <section class="section-heading" id="rooms">
+      <span class="heading-icon">୨୧</span>
+      <div><p class="eyebrow">pick a door, any door</p><h2>THE LITTLE ROOMS</h2></div>
+      <span class="heading-icon">୨୧</span>
+    </section>
+
+    <section class="room-grid">
+      <button class="room-card room-diary" data-modal="diary">
+        <span class="room-emoji">📔</span><span class="room-label">SECRET DIARY</span>
+        <small>thoughts from my brain</small><span class="room-arrow">↗</span>
+      </button>
+      <button class="room-card room-closet" data-modal="closet">
+        <span class="room-emoji">👗</span><span class="room-label">DRESS-UP ROOM</span>
+        <small>style a tiny mood</small><span class="room-arrow">↗</span>
+      </button>
+      <button class="room-card room-arcade" data-modal="arcade">
+        <span class="room-emoji">🕹️</span><span class="room-label">MINI ARCADE</span>
+        <small>for absolutely no reason</small><span class="room-arrow">↗</span>
+      </button>
+      <button class="room-card room-collection" data-modal="collection">
+        <span class="room-emoji">🧸</span><span class="room-label">MY COLLECTION</span>
+        <small>little things I adore</small><span class="room-arrow">↗</span>
+      </button>
+    </section>
+
+    <section class="lower-grid">
+      <article class="paper-card mood-card">
+        <div class="card-topline"><span>MOOD CHECK</span><span>● LIVE-ish</span></div>
+        <h3>how's Moura today?</h3>
+        <p class="muted">pick a mood and let the tiny computer know.</p>
+        <div class="mood-options" id="moodOptions">
+          <button data-mood="૮ ˶ᵔ ᵕ ᵔ˶ ა happy" data-face="🌷">🌷</button>
+          <button data-mood="૮ ˃̣̣̥⌓˂̣̣̥ ა sleepy" data-face="💤">💤</button>
+          <button data-mood="૮ • ﻌ - ა mysterious" data-face="🕶️">🕶️</button>
+          <button data-mood="૮ ฅﻌฅ ა chaotic" data-face="🧃">🧃</button>
+          <button data-mood="૮ ˶•̀ ᴗ •́˶ ა productive" data-face="⭐">⭐</button>
+        </div>
+        <div class="mood-result" id="moodResult">૮ ˶ᵔ ᵕ ᵔ˶ ა happy</div>
+      </article>
+
+      <article class="paper-card fortune-card">
+        <div class="card-topline"><span>MAGIC COOKIE</span><span>NO. 001</span></div>
+        <div class="cookie">🥠</div>
+        <h3>a tiny fortune for you</h3>
+        <p id="fortuneText">click the cookie. trust the cookie.</p>
+        <button class="cute-button lavender" id="fortuneButton">OPEN MY FORTUNE ✧</button>
+      </article>
+    </section>
+
+    <section class="playlist paper-card">
+      <div class="playlist-art">♫</div>
+      <div class="playlist-copy">
+        <p class="eyebrow">currently in my head</p>
+        <h3>MOURA FM <span>♡</span></h3>
+        <p id="playlistMood">now playing: main character in her bedroom</p>
+      </div>
+      <button class="cute-button blue" id="playlistButton">CHANGE VIBE ↻</button>
+    </section>
+
+    <footer>
+      <div class="footer-bow">🎀</div>
+      <p>made with ♡, glitter & questionable decisions</p>
+      <small>© <span id="year"></span> MOURA'S LITTLE WORLD · a tiny corner of the internet</small>
+      <button id="secretButton" class="secret-link">psst... click me 3 times</button>
+    </footer>
+  </main>
+
+  <div class="modal-backdrop" id="modalBackdrop" hidden>
+    <section class="modal-window" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <header class="modal-header">
+        <div class="window-dots"><i></i><i></i><i></i></div>
+        <button class="close-modal" id="closeModal" aria-label="Tutup">×</button>
+      </header>
+      <div class="modal-content" id="modalContent"></div>
+    </section>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
